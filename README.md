@@ -2,6 +2,8 @@
 
 Aplicação web responsiva para explorar Pokémon, consultar seus detalhes e comparar duas espécies. Os dados são carregados da [PokéAPI](https://pokeapi.co/docs/v2), e as páginas principais usam renderização no servidor (SSR).
 
+**Preview:** [pokedex-svelte-six.vercel.app](https://pokedex-svelte-six.vercel.app/)
+
 ## Funcionalidades
 
 - Catálogo paginado, com 24 Pokémon por página.
