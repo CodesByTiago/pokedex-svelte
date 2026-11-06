@@ -1,0 +1,113 @@
+@reference "../../../../../app.css";
+
+.page {
+  @apply mx-auto min-h-screen w-full max-w-7xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8;
+}
+
+.backLink {
+  @apply mb-8 inline-flex items-center gap-2 text-sm font-semibold text-muted-foreground transition hover:text-foreground;
+}
+
+.navigation {
+  @apply mb-8 flex flex-wrap items-center justify-between gap-3;
+}
+
+.navigation .backLink {
+  @apply mb-0;
+}
+
+.compareLink {
+  @apply rounded-lg border border-primary/20 bg-primary/5 px-4 py-2 text-sm font-semibold text-primary transition-colors hover:bg-primary/10;
+}
+
+.panel {
+  @apply overflow-hidden rounded-3xl border bg-card shadow-sm;
+}
+
+.hero {
+  @apply grid gap-6 bg-muted p-6 sm:grid-cols-2 sm:items-center sm:p-10;
+}
+
+.artwork {
+  @apply mx-auto aspect-square w-full max-w-80 object-contain;
+}
+
+.heading {
+  @apply text-center sm:text-left;
+}
+
+.number {
+  @apply mb-2 block text-sm font-bold tracking-widest text-muted-foreground;
+}
+
+.name {
+  @apply text-4xl font-black capitalize tracking-tight sm:text-5xl;
+}
+
+.types {
+  @apply mt-4 flex flex-wrap justify-center gap-2 sm:justify-start;
+}
+
+.type {
+  @apply rounded-full bg-primary px-4 py-1.5 text-sm font-semibold capitalize text-primary-foreground;
+}
+
+.measurements {
+  @apply mt-6 flex justify-center gap-8 sm:justify-start;
+}
+
+.measurement {
+  @apply flex flex-col gap-1 text-sm text-muted-foreground;
+}
+
+.measurementValue {
+  @apply text-lg font-bold text-foreground;
+}
+
+.body {
+  @apply grid gap-10 p-6 sm:grid-cols-2 sm:p-10;
+}
+
+.sectionTitle {
+  @apply mb-5 text-xl font-bold;
+}
+
+.abilityList {
+  @apply flex flex-wrap gap-2;
+}
+
+.ability {
+  @apply rounded-lg border bg-background px-3 py-2 text-sm font-medium capitalize;
+}
+
+.stats {
+  @apply flex flex-col gap-4;
+}
+
+.stat {
+  @apply grid grid-cols-[minmax(5rem,1fr)_2rem_2fr] items-center gap-3 text-sm;
+}
+
+.statName {
+  @apply truncate capitalize text-muted-foreground;
+}
+
+.statValue {
+  @apply text-right font-bold tabular-nums;
+}
+
+.track {
+  @apply h-2 overflow-hidden rounded-full bg-muted;
+}
+
+.bar {
+  @apply h-full rounded-full bg-primary;
+}
+
+.shiny {
+  @apply mt-8 border-t p-6 sm:px-10;
+}
+
+.shinyImage {
+  @apply mt-3 size-24 object-contain;
+}

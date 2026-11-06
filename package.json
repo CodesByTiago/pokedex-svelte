@@ -1,0 +1,52 @@
+{
+  "name": "svelte-pokedex",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "imports": {
+    "#lib": "./src/lib/index.js",
+    "#lib/*": "./src/lib/*.js"
+  },
+  "scripts": {
+    "dev": "vp dev",
+    "build": "vp build",
+    "preview": "vp preview",
+    "seo": "node scripts/seo.mjs",
+    "prepare": "vp config && svelte-kit sync || echo ''",
+    "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
+    "check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch"
+  },
+  "dependencies": {
+    "@lucide/svelte": "^1.69.0",
+    "axios": "^1.21.0",
+    "bits-ui": "^2.20.6",
+    "cn": "^0.5.2",
+    "tw-animate-css": "^1.4.0"
+  },
+  "devDependencies": {
+    "@lhci/cli": "^0.16.0",
+    "@sveltejs/adapter-auto": "^8.0.0",
+    "@sveltejs/kit": "^3.0.0",
+    "@sveltejs/vite-plugin-svelte": "^7.2.0",
+    "@tailwindcss/vite": "^4.3.4",
+    "msw": "^3.0.3",
+    "svelte": "^5.57.2",
+    "svelte-check": "^4.6.0",
+    "tailwindcss": "^4.3.4",
+    "typescript": "^6.0.3",
+    "vite": "catalog:",
+    "vite-plus": "catalog:"
+  },
+  "devEngines": {
+    "packageManager": {
+      "name": "pnpm",
+      "version": "12.18.0",
+      "onFail": "download"
+    }
+  },
+  "msw": {
+    "workerDirectory": [
+      "static"
+    ]
+  }
+}
