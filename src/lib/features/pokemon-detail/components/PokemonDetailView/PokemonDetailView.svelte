@@ -32,7 +32,7 @@
 </script>
 
 <main class={styles.page}>
-  <Header page="catalog" {compareFirst} {compareSecond} />
+  <Header page="detail" {compareFirst} {compareSecond} />
 
   <div class={styles.navigation}>
     <a class={styles.backLink} href={getCatalogHref(compareFirst, compareSecond)}>

@@ -11,17 +11,17 @@
     compareFirst = "",
     compareSecond = "",
   }: {
-    page: "catalog" | "compare";
+    page: "catalog" | "compare" | "detail";
     compareFirst?: string;
     compareSecond?: string;
   } = $props();
 
   const href = $derived(
-    page === "catalog"
-      ? getComparisonHref(compareFirst, compareSecond)
-      : getCatalogHref(compareFirst, compareSecond),
+    page === "compare"
+      ? getCatalogHref(compareFirst, compareSecond)
+      : getComparisonHref(compareFirst, compareSecond),
   );
-  const linkLabel = $derived(page === "catalog" ? "Comparar Pokémon" : "Catálogo");
+  const linkLabel = $derived(page === "compare" ? "Catálogo" : "Comparar Pokémon");
 </script>
 
 <nav class={styles.navigation} aria-label="Navegação principal">
@@ -29,7 +29,7 @@
     <span class={styles.brandMark} aria-hidden="true">P</span>
     <span class={styles.brandName}>Pokédex</span>
   </a>
-  {#if page === "compare" || (!compareFirst && !compareSecond)}
+  {#if page === "compare" || (page === "catalog" && !compareFirst && !compareSecond)}
     <div transition:slide={{ duration: 400 }}>
       <a class={styles.navigationLink} {href}>{linkLabel}</a>
     </div>
