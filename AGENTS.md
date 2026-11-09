@@ -40,6 +40,7 @@ Para executar o trabalho em etapas, use as skills em `.agents/skills/`:
 
 | Etapa                                      | Skill               |
 | ------------------------------------------ | ------------------- |
+| Definir ou refinar requisitos do produto   | `prd-feature`       |
 | Implementar comportamento                  | `implement-feature` |
 | Criar ou atualizar testes                  | `test-feature`      |
 | Implementar ou revisar SEO de rota pública | `seo-feature`       |
