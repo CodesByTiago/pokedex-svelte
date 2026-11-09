@@ -4,6 +4,7 @@
   import Header from "#lib/shared/components/Header/Header.svelte";
   import PokemonAutocomplete from "#lib/shared/components/PokemonAutocomplete/PokemonAutocomplete.svelte";
   import type { PokemonSummary } from "#lib/shared/models/pokemon.js";
+  import { getPokemonComparisonStore } from "#lib/shared/states/pokemonComparison.svelte.js";
   import {
     getComparisonHref,
     getPokemonDetailHref,
@@ -28,6 +29,7 @@
     compareFirst: string;
     compareSecond: string;
   } = $props();
+  const comparisonStore = getPokemonComparisonStore();
 
   const pageHref = (nextPage: number) => {
     const params = new URLSearchParams();
@@ -107,7 +109,11 @@
           >
             Abrir comparação
           </a>
-          <a class={styles.clearComparisonLink} href={clearComparisonHref()}>
+          <a
+            class={styles.clearComparisonLink}
+            href={clearComparisonHref()}
+            onclick={() => comparisonStore.clear()}
+          >
             Limpar comparação
           </a>
         </div>

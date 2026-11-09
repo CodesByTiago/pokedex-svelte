@@ -90,7 +90,7 @@ export const getProducts = async (): Promise<Type[]> => {
 
 ## API a ser consumida
 
-A APi a ser consumida será a PokéAPI
+A API a ser consumida será a PokéAPI
 
 Consultar a documentação da API para consumir os dados de form correta.
 URL da documentação: https://pokeapi.co/docs/v2

@@ -1,8 +1,16 @@
 <script lang="ts">
+  import { getPokemonComparisonStore } from "#lib/shared/states/pokemonComparison.svelte.js";
   import { PokemonListView } from "#lib/features/pokemon-list/index.js";
   import type { PageData } from "./$types";
 
   let { data }: { data: PageData } = $props();
+  const comparisonStore = getPokemonComparisonStore();
+  const compareFirst = $derived(
+    comparisonStore.current?.firstQuery ?? data.compareFirst,
+  );
+  const compareSecond = $derived(
+    comparisonStore.current?.secondQuery ?? data.compareSecond,
+  );
 </script>
 
 <svelte:head>
@@ -19,6 +27,6 @@
   page={data.page}
   totalPages={data.totalPages}
   total={data.total}
-  compareFirst={data.compareFirst}
-  compareSecond={data.compareSecond}
+  {compareFirst}
+  {compareSecond}
 />
