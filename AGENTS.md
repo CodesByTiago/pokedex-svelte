@@ -32,7 +32,24 @@ release. Add a tool name to select part of the graph. For example, run
 
 <!--AGENT REFERENCES-->
 
-# Projeto SvelteKit + TypeScript, organizado por features. Antes de implementar, leia a documentação relevante:
+# Projeto SvelteKit + TypeScript, organizado por features.
+
+## Fluxo de desenvolvimento
+
+Para executar o trabalho em etapas, use as skills em `.agents/skills/`:
+
+| Etapa                                      | Skill               |
+| ------------------------------------------ | ------------------- |
+| Implementar comportamento                  | `implement-feature` |
+| Criar ou atualizar testes                  | `test-feature`      |
+| Implementar ou revisar SEO de rota pública | `seo-feature`       |
+| Verificação final, sem alterar arquivos    | `qa-feature`        |
+
+Cada etapa deve consultar somente a documentação indicada pela tarefa e pela skill correspondente. SEO é condicional: use essa etapa quando a mudança afetar uma rota pública ou seus metadados.
+
+## Documentação do projeto
+
+Consulte os documentos pertinentes à tarefa; não é necessário ler todos antes de começar.
 
 | Assunto                                            | Doc                                            |
 | -------------------------------------------------- | ---------------------------------------------- |
@@ -49,7 +66,7 @@ release. Add a tool name to select part of the graph. For example, run
 - Cada página deve ter sua própria feature em `src/lib/features`; não agrupe páginas distintas na mesma feature.
 - Não coloque lógica de negócio em `src/routes`; a rota delega à API pública da feature correspondente.
 - Recursos usados por mais de uma página vivem em `src/lib/shared`; features não importam diretamente umas das outras.
-- Toda feature nova ou alterada deve ter testes (ver `docs/testing.md`).
-- Mantenha arquivos `.svelte` pequenos: estilos em arquivo separado (ver `docs/styling.md`).
+- Toda feature nova ou alterada deve receber testes; use a etapa `test-feature` e consulte `docs/testing.md`.
+- Para mudanças de interface, consulte `docs/styling.md` e mantenha os estilos separados conforme os padrões do projeto.
 
 <!--AGENT REFERENCES END-->

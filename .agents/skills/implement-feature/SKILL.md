@@ -1,23 +1,16 @@
 ---
 name: implement-feature
-description: "Use when creating or changing a SvelteKit page, feature, route, or user-facing behavior in this Pokédex project."
+description: "Use for the implementation stage when building or changing a SvelteKit page, feature, route, or user-facing behavior in this Pokédex project."
 argument-hint: "Descreva a feature ou mudança desejada"
 ---
 
-# Implementar uma feature
+# Implementação da feature
 
-Use esta skill para orientar o fluxo de implementação sem carregar documentação que não se aplica à tarefa.
+Esta etapa implementa o comportamento solicitado. A criação dos testes, a avaliação de SEO e o QA final são etapas separadas; não as execute aqui, a menos que o usuário peça para combinar etapas.
 
-1. Entenda o escopo. Consulte `docs/prd.md` somente quando precisar confirmar requisitos ou regras do produto.
-2. Consulte `docs/architecture.md` para mudanças na estrutura de uma feature, rotas, limites entre módulos ou acesso a dados.
-3. Consulte apenas os documentos adicionais pertinentes:
-   - `docs/testing.md` para criar ou alterar testes.
-   - `docs/styling.md` para mudanças de interface ou estilos.
-   - `docs/seo.md` para rotas públicas, metadados ou auditoria SEO.
-4. Inspecione uma implementação semelhante no código antes de definir novos padrões.
-5. Mantenha cada página em sua própria feature; deixe `src/routes` como camada de conexão e composição.
-6. Coloque código reutilizado por mais de uma página em `src/lib/shared` e respeite as APIs públicas das features.
-7. Use Svelte 5 e TypeScript estrito. Mantenha os estilos em `.module.css`, conforme os padrões do projeto.
-8. Adicione ou atualize testes para o comportamento afetado. Não dependa de chamadas reais à PokéAPI.
-9. Execute as verificações pertinentes, incluindo `vp check` e, quando Vitest estiver configurado, `vp test`.
-10. Ao concluir, resuma as alterações e informe os comandos de validação executados.
+1. Entenda o escopo e os critérios de aceitação. Consulte `docs/prd.md` somente se precisar confirmar requisitos do produto.
+2. Consulte `docs/architecture.md` para mudanças na estrutura, rotas, limites entre módulos ou acesso a dados.
+3. Para alterações de interface ou estilos, consulte `docs/styling.md`. Não leia documentos de testes ou SEO nesta etapa, a menos que a tarefa também inclua esses assuntos.
+4. Inspecione uma implementação semelhante no código para seguir os padrões existentes.
+5. Implemente a mudança nos módulos apropriados, respeitando as regras gerais do `AGENTS.md`.
+6. Ao terminar, resuma os arquivos e comportamentos alterados e indique que as etapas de testes, SEO (se aplicável) e QA podem ser executadas separadamente.
