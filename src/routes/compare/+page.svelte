@@ -1,27 +1,24 @@
 <script lang="ts">
-  import { untrack } from "svelte";
+  import { onMount, untrack } from "svelte";
   import { page } from "$app/state";
-  import { replaceState } from "$app/navigation";
+  import { replaceState, snapshot } from "$app/navigation";
   import { PokemonCompareView } from "#lib/features/pokemon-compare/index.js";
-  import { resolvePokemonComparisonState } from "#lib/features/pokemon-compare/state.js";
+  import type { PokemonComparisonState } from "#lib/features/pokemon-compare/state.js";
   import type { PageData } from "./$types";
 
   let { data }: { data: PageData } = $props();
-  let comparisonState = $state(untrack(() => data));
+  let comparisonState = $state<PokemonComparisonState>(untrack(() => data));
 
-  $effect(() => {
-    const hasQuery = page.url.searchParams.size > 0;
-    comparisonState = resolvePokemonComparisonState(
-      data,
-      page.state.pokemonComparison,
-      hasQuery,
-    );
+  snapshot({
+    capture: () => comparisonState,
+    restore: (state) => {
+      comparisonState = state;
+    },
+  });
 
-    if (hasQuery) {
-      void replaceState(page.url.pathname, {
-        ...page.state,
-        pokemonComparison: data,
-      });
+  onMount(() => {
+    if (page.url.searchParams.size > 0) {
+      void replaceState(page.url.pathname, {});
     }
   });
 </script>

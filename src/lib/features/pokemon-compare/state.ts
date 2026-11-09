@@ -7,11 +7,3 @@ export interface PokemonComparisonState {
   notFound: boolean;
   validationMessage: string;
 }
-
-export function resolvePokemonComparisonState(
-  loadedState: PokemonComparisonState,
-  savedState: PokemonComparisonState | undefined,
-  hasQuery: boolean,
-): PokemonComparisonState {
-  return hasQuery || !savedState ? loadedState : savedState;
-}
