@@ -1,11 +1,25 @@
 @reference "../../../../app.css";
 
 .root {
-  @apply relative min-w-0 flex-1;
+  @apply relative
+    min-w-0
+    flex-1;
 }
 
 .input {
-  @apply h-12 w-full min-w-0 rounded-xl border bg-background px-4 text-base outline-none transition placeholder:text-muted-foreground focus-visible:ring-2 focus-visible:ring-ring;
+  @apply h-12
+    w-full
+    min-w-0
+    rounded-xl
+    border
+    bg-background
+    px-4
+    text-base
+    outline-none
+    transition
+    placeholder:text-muted-foreground
+    focus-visible:ring-2
+    focus-visible:ring-ring;
 }
 
 .input.hasSearchIcon {
@@ -13,23 +27,52 @@
 }
 
 .searchIcon {
-  @apply pointer-events-none absolute top-1/2 right-4 -translate-y-1/2 text-muted-foreground;
+  @apply pointer-events-none
+    absolute
+    top-1/2
+    right-4
+    -translate-y-1/2
+    text-muted-foreground;
 }
 
 .input[aria-invalid="true"] {
-  @apply border-destructive focus-visible:ring-destructive;
+  @apply border-destructive
+    focus-visible:ring-destructive;
 }
 
 .popover {
-  @apply absolute top-[calc(100%+0.5rem)] right-0 left-0 z-20 overflow-hidden rounded-xl border bg-popover shadow-lg;
+  @apply absolute
+    top-[calc(100%+0.5rem)]
+    right-0
+    left-0
+    z-20
+    overflow-hidden
+    rounded-xl
+    border
+    bg-popover
+    shadow-lg;
 }
 
 .listbox {
-  @apply max-h-72 overflow-y-auto p-1;
+  @apply max-h-72
+    overflow-y-auto
+    p-1;
 }
 
 .option {
-  @apply flex w-full cursor-pointer items-center gap-3 rounded-lg px-3 py-2 text-left transition-colors hover:bg-accent focus-visible:bg-accent focus-visible:outline-none;
+  @apply flex
+    w-full
+    cursor-pointer
+    items-center
+    gap-3
+    rounded-lg
+    px-3
+    py-2
+    text-left
+    transition-colors
+    hover:bg-accent
+    focus-visible:bg-accent
+    focus-visible:outline-none;
 }
 
 .option[aria-selected="true"] {
@@ -37,17 +80,29 @@
 }
 
 .image {
-  @apply size-9 shrink-0 object-contain;
+  @apply size-9
+    shrink-0
+    object-contain;
 }
 
 .pokemonName {
-  @apply min-w-0 flex-1 truncate text-sm font-medium capitalize;
+  @apply min-w-0
+    flex-1
+    truncate
+    text-sm
+    font-medium
+    capitalize;
 }
 
 .pokemonNumber {
-  @apply shrink-0 text-xs text-muted-foreground;
+  @apply shrink-0
+    text-xs
+    text-muted-foreground;
 }
 
 .status {
-  @apply px-4 py-3 text-sm text-muted-foreground;
+  @apply px-4
+    py-3
+    text-sm
+    text-muted-foreground;
 }

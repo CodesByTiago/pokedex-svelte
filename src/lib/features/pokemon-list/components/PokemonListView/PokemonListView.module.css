@@ -1,35 +1,84 @@
 @reference "../../../../../app.css";
 
 .page {
-  @apply mx-auto min-h-screen w-full max-w-7xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8;
+  @apply mx-auto
+    min-h-screen
+    w-full
+    max-w-7xl
+    px-4
+    py-8
+    sm:px-6
+    sm:py-12
+    lg:px-8;
 }
 
 .header {
-  @apply mb-10 flex flex-col gap-8 sm:mb-12;
+  @apply mb-10
+    flex
+    flex-col
+    gap-8
+    sm:mb-12;
 }
 
 .compareStatus {
-  @apply mb-5 flex flex-wrap items-center justify-between gap-3 rounded-xl border bg-muted/50 px-4 py-3 text-sm text-muted-foreground;
+  @apply mb-5
+    flex
+    flex-wrap
+    items-center
+    justify-between
+    gap-3
+    rounded-xl
+    border
+    bg-muted/50
+    px-4
+    py-3
+    text-sm
+    text-muted-foreground;
 }
 
 .compareStatus strong {
-  @apply capitalize text-foreground;
+  @apply capitalize
+    text-foreground;
 }
 
 .compareStatus a {
-  @apply font-semibold text-foreground underline-offset-4 hover:underline;
+  @apply font-semibold
+    text-foreground
+    underline-offset-4
+    hover:underline;
 }
 
 .compareStatusActions {
-  @apply flex flex-wrap items-center gap-4;
+  @apply flex
+    flex-wrap
+    items-center
+    gap-4;
 }
 
 .compareStatus .openComparisonLink {
-  @apply rounded-md bg-primary px-3 py-1.5 text-primary-foreground no-underline transition-colors hover:bg-primary/90 hover:no-underline;
+  @apply rounded-md
+    bg-primary
+    px-3
+    py-1.5
+    text-primary-foreground
+    no-underline
+    transition-colors
+    hover:bg-primary/90
+    hover:no-underline;
 }
 
 .compareStatus .clearComparisonLink {
-  @apply cursor-pointer rounded-md border bg-background px-3 py-1.5 text-muted-foreground no-underline transition-colors hover:bg-accent hover:text-foreground;
+  @apply cursor-pointer
+    rounded-md
+    border
+    bg-background
+    px-3
+    py-1.5
+    text-muted-foreground
+    no-underline
+    transition-colors
+    hover:bg-accent
+    hover:text-foreground;
 }
 
 .compareStatus .clearComparisonLink:hover {
@@ -37,19 +86,37 @@
 }
 
 .hero {
-  @apply flex flex-col gap-3 rounded-2xl border bg-secondary/45 p-6 sm:p-8;
+  @apply flex
+    flex-col
+    gap-3
+    rounded-2xl
+    border
+    bg-secondary/45
+    p-6
+    sm:p-8;
 }
 
 .eyebrow {
-  @apply text-sm font-semibold uppercase tracking-[0.16em] text-primary;
+  @apply text-sm
+    font-semibold
+    uppercase
+    tracking-[0.16em]
+    text-primary;
 }
 
 .title {
-  @apply text-4xl font-bold tracking-tight sm:text-5xl;
+  @apply text-4xl
+    font-bold
+    tracking-tight
+    sm:text-5xl;
 }
 
 .description {
-  @apply max-w-2xl text-base leading-7 text-muted-foreground sm:text-lg;
+  @apply max-w-2xl
+    text-base
+    leading-7
+    text-muted-foreground
+    sm:text-lg;
 }
 
 .searchForm {
@@ -57,19 +124,32 @@
 }
 
 .resultsHeader {
-  @apply mb-5 flex flex-wrap items-end justify-between gap-2;
+  @apply mb-5
+    flex
+    flex-wrap
+    items-end
+    justify-between
+    gap-2;
 }
 
 .resultsTitle {
-  @apply text-xl font-bold;
+  @apply text-xl
+    font-bold;
 }
 
 .resultsCount {
-  @apply text-sm text-muted-foreground;
+  @apply text-sm
+    text-muted-foreground;
 }
 
 .grid {
-  @apply grid grid-cols-2 gap-3 sm:grid-cols-3 sm:gap-4 lg:grid-cols-4 xl:grid-cols-6;
+  @apply grid
+    grid-cols-2
+    gap-3
+    sm:grid-cols-3
+    sm:gap-4
+    lg:grid-cols-4
+    xl:grid-cols-6;
 }
 
 .gridItem {
@@ -77,21 +157,41 @@
 }
 
 .empty {
-  @apply rounded-2xl border border-dashed p-10 text-center text-muted-foreground;
+  @apply rounded-2xl
+    border
+    border-dashed
+    p-10
+    text-center
+    text-muted-foreground;
 }
 
 .pagination {
-  @apply mt-10 flex items-center justify-center gap-4;
+  @apply mt-10
+    flex
+    items-center
+    justify-center
+    gap-4;
 }
 
 .pageLink {
-  @apply rounded-lg border px-4 py-2 text-sm font-semibold transition hover:bg-accent disabled:pointer-events-none disabled:opacity-50;
+  @apply rounded-lg
+    border
+    px-4
+    py-2
+    text-sm
+    font-semibold
+    transition
+    hover:bg-accent
+    disabled:pointer-events-none
+    disabled:opacity-50;
 }
 
 .pageLink[aria-disabled="true"] {
-  @apply pointer-events-none opacity-50;
+  @apply pointer-events-none
+    opacity-50;
 }
 
 .pageStatus {
-  @apply text-sm text-muted-foreground;
+  @apply text-sm
+    text-muted-foreground;
 }

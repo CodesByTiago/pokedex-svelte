@@ -1,21 +1,48 @@
 @reference "../../../../app.css";
 
 .navigation {
-  @apply mb-8 flex flex-wrap items-center justify-between gap-4;
+  @apply mb-8
+    flex
+    flex-wrap
+    items-center
+    justify-between
+    gap-4;
 }
 
 .brand {
-  @apply flex items-center gap-3;
+  @apply flex
+    items-center
+    gap-3;
 }
 
 .brandMark {
-  @apply flex size-11 items-center justify-center rounded-full bg-primary text-xl font-black text-primary-foreground;
+  @apply flex
+    size-11
+    items-center
+    justify-center
+    rounded-full
+    bg-primary
+    text-xl
+    font-black
+    text-primary-foreground;
 }
 
 .brandName {
-  @apply text-lg font-bold tracking-tight;
+  @apply text-lg
+    font-bold
+    tracking-tight;
 }
 
 .navigationLink {
-  @apply rounded-lg border border-primary/20 bg-primary/5 px-4 py-2 text-sm font-semibold text-primary transition-colors hover:bg-primary/10;
+  @apply rounded-lg
+    border
+    border-primary/20
+    bg-primary/5
+    px-4
+    py-2
+    text-sm
+    font-semibold
+    text-primary
+    transition-colors
+    hover:bg-primary/10;
 }

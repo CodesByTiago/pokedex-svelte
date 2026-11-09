@@ -1,72 +1,136 @@
 @reference "../../../../../app.css";
 
 .page {
-  @apply mx-auto min-h-screen w-full max-w-7xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8;
+  @apply mx-auto
+    min-h-screen
+    w-full
+    max-w-7xl
+    px-4
+    py-8
+    sm:px-6
+    sm:py-12
+    lg:px-8;
 }
 
 .header {
-  @apply mb-8 flex flex-col gap-3;
+  @apply mb-8
+    flex
+    flex-col
+    gap-3;
 }
 
 .title {
-  @apply text-4xl font-bold tracking-tight sm:text-5xl;
+  @apply text-4xl
+    font-bold
+    tracking-tight
+    sm:text-5xl;
 }
 
 .description {
-  @apply max-w-2xl text-base leading-7 text-muted-foreground;
+  @apply max-w-2xl
+    text-base
+    leading-7
+    text-muted-foreground;
 }
 
 .form {
-  @apply rounded-2xl border bg-card p-5 shadow-sm sm:p-6;
+  @apply rounded-2xl
+    border
+    bg-card
+    p-5
+    shadow-sm
+    sm:p-6;
 }
 
 .fields {
-  @apply grid gap-4 sm:grid-cols-[1fr_auto_1fr] sm:items-end;
+  @apply grid
+    gap-4
+    sm:grid-cols-[1fr_auto_1fr]
+    sm:items-end;
 }
 
 .field {
-  @apply flex min-w-0 flex-col gap-2;
+  @apply flex
+    min-w-0
+    flex-col
+    gap-2;
 }
 
 .labelRow {
-  @apply flex min-h-8 items-center justify-between gap-2;
+  @apply flex
+    min-h-8
+    items-center
+    justify-between
+    gap-2;
 }
 
 .label {
-  @apply text-sm font-semibold;
+  @apply text-sm
+    font-semibold;
 }
 
 .input {
-  @apply h-12 min-h-0 rounded-xl px-4;
+  @apply h-12
+    min-h-0
+    rounded-xl
+    px-4;
 }
 
 .input[aria-invalid="true"] {
-  @apply border-destructive focus-visible:ring-destructive;
+  @apply border-destructive
+    focus-visible:ring-destructive;
 }
 
 .versus {
-  @apply hidden pb-3 text-sm font-black text-muted-foreground sm:block;
+  @apply hidden
+    pb-3
+    text-sm
+    font-black
+    text-muted-foreground
+    sm:block;
 }
 
 .formActions {
-  @apply mt-4 flex flex-col gap-2 sm:flex-row;
+  @apply mt-4
+    flex
+    flex-col
+    gap-2
+    sm:flex-row;
 }
 
 .submit,
 .clearAll {
-  @apply h-12 w-full sm:w-auto;
+  @apply h-12
+    w-full
+    sm:w-auto;
 }
 
 .submit {
-  @apply transition-transform hover:-translate-y-0.5;
+  @apply transition-transform
+    hover:-translate-y-0.5;
 }
 
 .message {
-  @apply mt-6 rounded-2xl border border-dashed p-6 text-center text-muted-foreground;
+  @apply mt-6
+    rounded-2xl
+    border
+    border-dashed
+    p-6
+    text-center
+    text-muted-foreground;
 }
 
 .validationMessage {
-  @apply mt-4 rounded-xl border border-destructive/30 bg-destructive/10 px-4 py-3 text-sm font-medium text-destructive;
+  @apply mt-4
+    rounded-xl
+    border
+    border-destructive/30
+    bg-destructive/10
+    px-4
+    py-3
+    text-sm
+    font-medium
+    text-destructive;
 }
 
 .results {
@@ -74,15 +138,33 @@
 }
 
 .pokemonGrid {
-  @apply grid grid-cols-2 gap-3 sm:gap-5;
+  @apply grid
+    grid-cols-2
+    gap-3
+    sm:gap-5;
 }
 
 .pokemonCard {
-  @apply flex min-w-0 flex-col overflow-hidden rounded-2xl border bg-card text-card-foreground shadow-sm transition duration-200 hover:-translate-y-0.5 hover:shadow-md;
+  @apply flex
+    min-w-0
+    flex-col
+    overflow-hidden
+    rounded-2xl
+    border
+    bg-card
+    text-card-foreground
+    shadow-sm
+    transition
+    duration-200
+    hover:-translate-y-0.5
+    hover:shadow-md;
 }
 
 .detailsLink {
-  @apply block focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring;
+  @apply block
+    focus-visible:outline-2
+    focus-visible:outline-offset-2
+    focus-visible:outline-ring;
 }
 
 .pokemonCard:hover .artwork {
@@ -90,15 +172,37 @@
 }
 
 .imageArea {
-  @apply relative flex aspect-4/3 items-center justify-center overflow-hidden bg-muted p-2;
+  @apply relative
+    flex
+    aspect-4/3
+    items-center
+    justify-center
+    overflow-hidden
+    bg-muted
+    p-2;
 }
 
 .artwork {
-  @apply h-full w-full max-w-72 object-contain transition duration-300;
+  @apply h-full
+    w-full
+    max-w-72
+    object-contain
+    transition
+    duration-300;
 }
 
 .number {
-  @apply absolute top-3 right-3 rounded-full bg-background/80 px-3 py-1 text-xs font-semibold tracking-wider text-muted-foreground;
+  @apply absolute
+    top-3
+    right-3
+    rounded-full
+    bg-background/80
+    px-3
+    py-1
+    text-xs
+    font-semibold
+    tracking-wider
+    text-muted-foreground;
 }
 
 .cardContent {
@@ -106,35 +210,63 @@
 }
 
 .titleRow {
-  @apply flex items-center justify-between gap-2;
+  @apply flex
+    items-center
+    justify-between
+    gap-2;
 }
 
 .name {
-  @apply min-w-0 wrap-break-word text-base font-semibold capitalize;
+  @apply min-w-0
+    wrap-break-word
+    text-base
+    font-semibold
+    capitalize;
 }
 
 .arrow {
-  @apply shrink-0 text-muted-foreground transition;
+  @apply shrink-0
+    text-muted-foreground
+    transition;
 }
 
 .pokemonCard:hover .arrow {
-  @apply translate-x-1 text-foreground;
+  @apply translate-x-1
+    text-foreground;
 }
 
 .types {
-  @apply mt-2 flex flex-wrap gap-2;
+  @apply mt-2
+    flex
+    flex-wrap
+    gap-2;
 }
 
 .type {
-  @apply rounded-full bg-primary px-3 py-1 text-xs font-semibold capitalize text-primary-foreground;
+  @apply rounded-full
+    bg-primary
+    px-3
+    py-1
+    text-xs
+    font-semibold
+    capitalize
+    text-primary-foreground;
 }
 
 .facts {
-  @apply flex flex-col gap-2 border-t px-3 py-2 text-sm;
+  @apply flex
+    flex-col
+    gap-2
+    border-t
+    px-3
+    py-2
+    text-sm;
 }
 
 .facts div {
-  @apply flex flex-col gap-1;
+  @apply flex
+    flex-col
+    gap-1;
 }
 
 .facts dt {
@@ -142,35 +274,72 @@
 }
 
 .facts dd {
-  @apply font-semibold capitalize;
+  @apply font-semibold
+    capitalize;
 }
 
 .statsSection {
-  @apply mt-8 rounded-2xl border bg-card p-4 shadow-sm sm:p-6;
+  @apply mt-8
+    rounded-2xl
+    border
+    bg-card
+    p-4
+    shadow-sm
+    sm:p-6;
 }
 
 .sectionTitle {
-  @apply mb-5 text-xl font-bold;
+  @apply mb-5
+    text-xl
+    font-bold;
 }
 
 .stats {
-  @apply flex flex-col gap-4;
+  @apply flex
+    flex-col
+    gap-4;
 }
 
 .statHeaders {
-  @apply mb-3 grid grid-cols-[4.5rem_minmax(0,1fr)_minmax(0,1fr)] gap-2 text-center text-xs font-bold capitalize text-muted-foreground sm:grid-cols-[7rem_minmax(0,1fr)_minmax(0,1fr)] sm:gap-4 sm:text-sm;
+  @apply mb-3
+    grid
+    grid-cols-[4.5rem_minmax(0,1fr)_minmax(0,1fr)]
+    gap-2
+    text-center
+    text-xs
+    font-bold
+    capitalize
+    text-muted-foreground
+    sm:grid-cols-[7rem_minmax(0,1fr)_minmax(0,1fr)]
+    sm:gap-4
+    sm:text-sm;
 }
 
 .statRow {
-  @apply grid grid-cols-[4.5rem_minmax(0,1fr)_minmax(0,1fr)] items-center gap-2 sm:grid-cols-[7rem_minmax(0,1fr)_minmax(0,1fr)] sm:gap-4;
+  @apply grid
+    grid-cols-[4.5rem_minmax(0,1fr)_minmax(0,1fr)]
+    items-center
+    gap-2
+    sm:grid-cols-[7rem_minmax(0,1fr)_minmax(0,1fr)]
+    sm:gap-4;
 }
 
 .statName {
-  @apply text-xs font-semibold capitalize text-muted-foreground sm:text-sm;
+  @apply text-xs
+    font-semibold
+    capitalize
+    text-muted-foreground
+    sm:text-sm;
 }
 
 .statValue {
-  @apply flex min-w-0 flex-col gap-2 text-sm font-bold tabular-nums;
+  @apply flex
+    min-w-0
+    flex-col
+    gap-2
+    text-sm
+    font-bold
+    tabular-nums;
 }
 
 .statValue[data-leading="true"] {
@@ -178,9 +347,16 @@
 }
 
 .track {
-  @apply block h-2 overflow-hidden rounded-full bg-muted;
+  @apply block
+    h-2
+    overflow-hidden
+    rounded-full
+    bg-muted;
 }
 
 .bar {
-  @apply block h-full rounded-full bg-primary;
+  @apply block
+    h-full
+    rounded-full
+    bg-primary;
 }

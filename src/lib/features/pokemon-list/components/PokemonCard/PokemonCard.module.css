@@ -1,11 +1,26 @@
 @reference "../../../../../app.css";
 
 .card {
-  @apply flex min-w-0 flex-col overflow-hidden rounded-2xl border bg-card text-card-foreground shadow-sm transition duration-200 hover:-translate-y-0.5 hover:shadow-md;
+  @apply flex
+    min-w-0
+    flex-col
+    overflow-hidden
+    rounded-2xl
+    border
+    bg-card
+    text-card-foreground
+    shadow-sm
+    transition
+    duration-200
+    hover:-translate-y-0.5
+    hover:shadow-md;
 }
 
 .detailsLink {
-  @apply block focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring;
+  @apply block
+    focus-visible:outline-2
+    focus-visible:outline-offset-2
+    focus-visible:outline-ring;
 }
 
 .card:hover .image {
@@ -13,39 +28,83 @@
 }
 
 .imageArea {
-  @apply relative flex aspect-square items-center justify-center overflow-hidden bg-muted p-5;
+  @apply relative
+    flex
+    aspect-square
+    items-center
+    justify-center
+    overflow-hidden
+    bg-muted
+    p-5;
 }
 
 .image {
-  @apply size-full object-contain transition duration-300;
+  @apply size-full
+    object-contain
+    transition
+    duration-300;
 }
 
 .number {
-  @apply absolute top-3 right-3 rounded-full bg-background/80 px-3 py-1 text-xs font-semibold tracking-wider text-muted-foreground;
+  @apply absolute
+    top-3
+    right-3
+    rounded-full
+    bg-background/80
+    px-3
+    py-1
+    text-xs
+    font-semibold
+    tracking-wider
+    text-muted-foreground;
 }
 
 .content {
-  @apply flex items-center justify-between gap-2 p-4;
+  @apply flex
+    items-center
+    justify-between
+    gap-2
+    p-4;
 }
 
 .name {
-  @apply truncate text-base font-semibold capitalize;
+  @apply truncate
+    text-base
+    font-semibold
+    capitalize;
 }
 
 .arrow {
-  @apply text-muted-foreground transition;
+  @apply text-muted-foreground
+    transition;
 }
 
 .card:hover .arrow {
-  @apply translate-x-1 text-foreground;
+  @apply translate-x-1
+    text-foreground;
 }
 
 .compareAction {
-  @apply border-t px-4 py-3 text-center text-sm font-semibold text-primary transition-colors hover:bg-primary/5 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring;
+  @apply border-t
+    px-4
+    py-3
+    text-center
+    text-sm
+    font-semibold
+    text-primary
+    transition-colors
+    hover:bg-primary/5
+    focus-visible:outline-2
+    focus-visible:outline-offset-2
+    focus-visible:outline-ring;
 }
 
 .selected .compareAction {
-  @apply border-primary bg-primary text-primary-foreground hover:bg-primary/90 hover:text-primary-foreground;
+  @apply border-primary
+    bg-primary
+    text-primary-foreground
+    hover:bg-primary/90
+    hover:text-primary-foreground;
 }
 
 .selectedAction {
