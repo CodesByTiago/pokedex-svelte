@@ -93,11 +93,11 @@ src/
 
 Os estilos das features ficam em CSS Modules próximos aos componentes. Veja os documentos para detalhes e convenções:
 
-- [Arquitetura](./docs/architecture.md)
-- [Estilização](./docs/styling.md)
-- [Testes](./docs/testing.md)
-- [SEO e Lighthouse](./docs/seo.md)
-- [Requisitos do produto](./docs/prd.md)
+- [Documentação do produto](./docs/product/)
+- [Arquitetura](./docs/engineering/architecture.md)
+- [Estilização](./docs/engineering/styling.md)
+- [Testes](./docs/engineering/testing.md)
+- [SEO e Lighthouse](./docs/engineering/seo.md)
 
 ## Auditoria SEO
 
@@ -109,7 +109,7 @@ vp run seo
 
 O comando audita `/`, `/compare` e `/pokemon/25` em Mobile e Desktop, exibe as notas SEO e falha caso alguma fique abaixo de 90. Os relatórios JSON e HTML são salvos localmente em `.lighthouseci/` e não são enviados a serviços externos.
 
-Se o Lighthouse não localizar o Chrome/Chromium instalado, defina `CHROME_PATH` com o caminho do executável antes de executar o comando. Mais informações estão em [docs/seo.md](./docs/seo.md).
+Se o Lighthouse não localizar o Chrome/Chromium instalado, defina `CHROME_PATH` com o caminho do executável antes de executar o comando. Mais informações estão em [docs/engineering/seo.md](./docs/engineering/seo.md).
 
 ## Build e implantação
 

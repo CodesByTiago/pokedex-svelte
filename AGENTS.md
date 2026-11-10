@@ -41,6 +41,8 @@ Para executar o trabalho em etapas, use as skills em `.agents/skills/`:
 | Etapa                                      | Skill               |
 | ------------------------------------------ | ------------------- |
 | Definir ou refinar requisitos do produto   | `prd-feature`       |
+| Criar ou atualizar o roadmap               | `roadmap-feature`   |
+| Planejar sprints, criar e encerrar épicos  | `po-feature`        |
 | Implementar comportamento                  | `implement-feature` |
 | Criar ou atualizar testes                  | `test-feature`      |
 | Implementar ou revisar SEO de rota pública | `seo-feature`       |
@@ -52,22 +54,22 @@ Cada etapa deve consultar somente a documentação indicada pela tarefa e pela s
 
 Consulte os documentos pertinentes à tarefa; não é necessário ler todos antes de começar.
 
-| Assunto                                            | Doc                                            |
-| -------------------------------------------------- | ---------------------------------------------- |
-| Produto, documentação sobre o produto a ser criado | [docs/prd.md](./docs/prd.md)                   |
-| Arquitetura, estrutura de pastas, API com Axios    | [docs/architecture.md](./docs/architecture.md) |
-| Estilização (Tailwind, shadcn-svelte, CSS Modules) | [docs/styling.md](./docs/styling.md)           |
-| Testes (Vitest, MSW, Testing Library)              | [docs/testing.md](./docs/testing.md)           |
-| SEO e auditoria Lighthouse                         | [docs/seo.md](./docs/seo.md)                   |
+| Assunto                                            | Doc                                                                    |
+| -------------------------------------------------- | ---------------------------------------------------------------------- |
+| Produto, requisitos, roadmap e épicos              | [docs/product/](./docs/product/)                                       |
+| Arquitetura, estrutura de pastas, API com Axios    | [docs/engineering/architecture.md](./docs/engineering/architecture.md) |
+| Estilização (Tailwind, shadcn-svelte, CSS Modules) | [docs/engineering/styling.md](./docs/engineering/styling.md)           |
+| Testes (Vitest, MSW, Testing Library)              | [docs/engineering/testing.md](./docs/engineering/testing.md)           |
+| SEO e auditoria Lighthouse                         | [docs/engineering/seo.md](./docs/engineering/seo.md)                   |
 
 ## Regras gerais
 
-- Em caso de dúvida sobre Svelte/SvelteKit, consulte a documentação oficial (links em `docs/architecture.md`) antes de supor comportamento.
+- Em caso de dúvida sobre Svelte/SvelteKit, consulte a documentação oficial (links em `docs/engineering/architecture.md`) antes de supor comportamento.
 - Use Svelte 5 (runes) e TypeScript estrito.
 - Cada página deve ter sua própria feature em `src/lib/features`; não agrupe páginas distintas na mesma feature.
 - Não coloque lógica de negócio em `src/routes`; a rota delega à API pública da feature correspondente.
 - Recursos usados por mais de uma página vivem em `src/lib/shared`; features não importam diretamente umas das outras.
-- Toda feature nova ou alterada deve receber testes; use a etapa `test-feature` e consulte `docs/testing.md`.
-- Para mudanças de interface, consulte `docs/styling.md` e mantenha os estilos separados conforme os padrões do projeto.
+- Toda feature nova ou alterada deve receber testes; use a etapa `test-feature` e consulte `docs/engineering/testing.md`.
+- Para mudanças de interface, consulte `docs/engineering/styling.md` e mantenha os estilos separados conforme os padrões do projeto.
 
 <!--AGENT REFERENCES END-->

@@ -1,0 +1,26 @@
+@reference "../../../../../app.css";
+
+.marker {
+  @apply size-8
+    shrink-0
+    self-start
+    drop-shadow-sm
+    sm:size-14;
+
+  /* A grade é um container; 16.5cqw centraliza o marcador na área da imagem dos cards. */
+  margin-top: 16.5cqw;
+  transform: translateY(-50%);
+}
+
+.circle {
+  @apply fill-primary
+    stroke-background;
+  stroke-width: 3;
+}
+
+.text {
+  @apply fill-primary-foreground
+    font-black;
+  font-size: 24px;
+  letter-spacing: 0.02em;
+}

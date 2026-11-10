@@ -50,7 +50,7 @@ O projeto consiste no desenvolvimento de uma aplicação web interativa que simu
 - **RNF03 (Integração):** O consumo de dados deve ser feito através da API REST oficial referenciada na arquitetura (ex: _PokéAPI_), utilizando a instância configurada do Axios.
 - **RNF04 (Desempenho):** A aplicação deve utilizar os recursos de SSR (Server-Side Rendering) do SvelteKit nas páginas de lista, detalhes e comparação para melhorar o SEO e o tempo de carregamento inicial (First Contentful Paint).
 - **RNF05 (Responsividade):** A interface deve se adaptar fluidamente desde telas de smartphones (320px) até monitores ultrawide.
-- **RNF06 (SEO):** As rotas públicas devem fornecer conteúdo renderizado no servidor, título e descrição próprios e atender ao score mínimo de 90 na auditoria SEO do Lighthouse. O processo de auditoria está documentado em [seo.md](./seo.md).
+- **RNF06 (SEO):** As rotas públicas devem fornecer conteúdo renderizado no servidor, título e descrição próprios e atender ao score mínimo de 90 na auditoria SEO do Lighthouse. O processo de auditoria está documentado em [seo.md](../engineering/seo.md).
 
 ## 6. Métricas de Sucesso
 

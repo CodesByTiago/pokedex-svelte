@@ -4,6 +4,7 @@
   import type { PokemonDetails } from "#lib/shared/models/pokemon.js";
   import Button from "#lib/shared/ui/button/Button.svelte";
   import { getPokemonDetailHref } from "#lib/shared/utils/pokemonComparison.js";
+  import VersusMarker from "../VersusMarker/VersusMarker.svelte";
   import styles from "./PokemonCompareView.module.css";
 
   let {
@@ -111,6 +112,9 @@
     <section class={styles.results} aria-label="Resultado da comparação">
       <div class={styles.pokemonGrid}>
         {#each comparison as pokemon, index (index)}
+          {#if index === 1}
+            <VersusMarker />
+          {/if}
           <article class={styles.pokemonCard}>
             <a
               class={styles.detailsLink}
@@ -155,6 +159,7 @@
         <h2 class={styles.sectionTitle} id="stats-title">Atributos base</h2>
         <div class={styles.statHeaders}>
           <span class="sr-only">Atributo</span>
+          <span aria-hidden="true"></span>
           <span>{comparison[0].name}</span>
           <span>{comparison[1].name}</span>
         </div>
